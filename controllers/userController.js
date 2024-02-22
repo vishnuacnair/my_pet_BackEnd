@@ -51,7 +51,6 @@ const getSinglePetData = async (req, res) => {
 const getMyBookingData = async (req, res) => {
     try {
 
-
       const myBooking= await PETS.find({petAdoptedBy:req.userId});
     //   const myBooking = await PETS.aggregate([
     //     {
@@ -68,8 +67,18 @@ const getMyBookingData = async (req, res) => {
     }
   };
   
-  
+  // const getAllDogPetsDatalandingpage = (req, res) => {
+  //   PETS.find()
+  //     .then((response) => {
+  //       res.status(200).json(response);
+  //       console.log(response);
+  //     })
+  //     .catch((err) => {
+  //       res.status(500).json(err);
+  //       console.log(err);
+  //     });
+  // };
   
 
 
-module.exports = { getAllDogPetsData, getSinglePetData, getMyBookingData  };
+module.exports = { getAllDogPetsData, getSinglePetData, getMyBookingData , getAllDogPetsDatalandingpage };
